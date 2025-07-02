@@ -1,0 +1,154 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 13% 65%;
+
+    --accent: 210 40% 94%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom sophisticated colors */
+    --sage: 150 20% 85%;
+    --sage-foreground: 150 25% 25%;
+    --slate-blue: 225 15% 75%;
+    --slate-blue-foreground: 225 20% 20%;
+    --warm-gray: 30 8% 88%;
+    --warm-gray-foreground: 30 12% 22%;
+    --lavender: 260 20% 85%;
+    --lavender-foreground: 260 25% 25%;
+  }
+
+  .dark {
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 84% 4.9%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 224 71% 4%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom sophisticated colors for dark mode */
+    --sage: 150 15% 20%;
+    --sage-foreground: 150 20% 80%;
+    --slate-blue: 225 15% 25%;
+    --slate-blue-foreground: 225 20% 80%;
+    --warm-gray: 30 8% 18%;
+    --warm-gray-foreground: 30 12% 82%;
+    --lavender: 260 15% 20%;
+    --lavender-foreground: 260 20% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-primary/20 selection:text-primary;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/60 dark:bg-black/40 border border-white/20 dark:border-white/10 shadow-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .sage-gradient {
+    @apply bg-gradient-to-br from-green-50/80 to-emerald-50/60 dark:from-green-900/20 dark:to-emerald-900/15;
+  }
+
+  .slate-gradient {
+    @apply bg-gradient-to-br from-slate-50/80 to-gray-50/60 dark:from-slate-800/20 dark:to-gray-800/15;
+  }
+
+  .warm-gradient {
+    @apply bg-gradient-to-br from-orange-50/80 to-amber-50/60 dark:from-orange-900/20 dark:to-amber-900/15;
+  }
+
+  .lavender-gradient {
+    @apply bg-gradient-to-br from-purple-50/80 to-indigo-50/60 dark:from-purple-900/20 dark:to-indigo-900/15;
+  }
+
+  .sophisticated-border {
+    @apply border border-slate-200/60 dark:border-slate-700/50;
+  }
+
+  .sophisticated-hover {
+    @apply hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-all duration-200;
+  }
+}
